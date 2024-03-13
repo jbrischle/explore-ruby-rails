@@ -57,5 +57,21 @@ bin/rails server
 ```
 
 ```shell
-bin/rails generate controller Articles index --skip-routes
+bin/rails generate controller Accounts index
+```
+
+```shell
+bin/rails generate model Account title:string bankName:string iban:string
+```
+
+```shell
+bin/rails db:migrate
+```
+
+```shell
+bin/rails console
+```
+
+```shell
+bin/rails routes
 ```

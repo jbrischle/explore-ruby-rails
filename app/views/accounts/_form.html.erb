@@ -1,0 +1,29 @@
+<%= form_with model: @account do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+    <% @account.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :bankName %><br>
+    <%= form.text_field :bankName %>
+    <% @account.errors.full_messages_for(:bankName).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :iban %><br>
+    <%= form.text_field :iban %>
+    <% @account.errors.full_messages_for(:iban).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
