@@ -55,3 +55,7 @@ Things you may want to cover:
 ```shell
 bin/rails server
 ```
+
+```shell
+bin/rails generate controller Articles index --skip-routes
+```
