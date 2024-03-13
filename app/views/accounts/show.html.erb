@@ -10,3 +10,31 @@
     turbo_confirm: "Are you sure?"
   } %></li>
 </ul>
+
+<h2>Transaction</h2>
+<% @account.transactions.each do |transaction| %>
+  <p>
+    <strong>Amount:</strong>
+    <%= transaction.amount %>
+  </p>
+
+  <p>
+    <strong>Source iban:</strong>
+    <%= transaction.sourceIban %>
+  </p>
+<% end %>
+
+<h2>Add a transaction:</h2>
+<%= form_with model: [@account, @account.transactions.build] do |form| %>
+  <p>
+    <%= form.label :amount %><br>
+    <%= form.text_field :amount %>
+  </p>
+  <p>
+    <%= form.label :sourceIban %><br>
+    <%= form.text_field :sourceIban %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_13_213014) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_13_223305) do
   create_table "accounts", force: :cascade do |t|
     t.string "title"
     t.string "bankName"
@@ -19,4 +19,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_13_213014) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "transactions", force: :cascade do |t|
+    t.string "amount"
+    t.string "sourceIban"
+    t.integer "account_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["account_id"], name: "index_transactions_on_account_id"
+  end
+
+  add_foreign_key "transactions", "accounts"
 end
