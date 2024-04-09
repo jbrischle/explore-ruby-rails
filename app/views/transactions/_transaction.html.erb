@@ -1,9 +1,11 @@
-<p>
-  <strong>Amount:</strong>
-  <%= transaction.amount %>
-</p>
+<% unless transaction.canceled? %>
+  <p>
+    <strong>Amount:</strong>
+    <%= transaction.amount %>
+  </p>
 
-<p>
-  <strong>Source iban:</strong>
-  <%= transaction.sourceIban %>
-</p>
+  <p>
+    <strong>Source iban:</strong>
+    <%= transaction.sourceIban %>
+  </p>
+<% end %>

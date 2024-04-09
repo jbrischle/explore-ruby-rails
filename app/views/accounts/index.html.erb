@@ -2,9 +2,11 @@
 
 <ul>
   <% @accounts.each do |account| %>
-    <li>
-      <%= link_to account.title, account %>
-    </li>
+    <% unless account.closed? %>
+      <li>
+        <%= link_to account.title, account %>
+      </li>
+    <% end %>
   <% end %>
 </ul>
 

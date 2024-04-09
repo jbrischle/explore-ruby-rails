@@ -8,6 +8,6 @@ class TransactionsController < ApplicationController
   private
 
   def transaction_params
-    params.require(:transaction).permit(:amount, :sourceIban)
+    params.require(:transaction).permit(:amount, :sourceIban, :status)
   end
 end

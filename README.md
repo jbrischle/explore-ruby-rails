@@ -75,3 +75,12 @@ bin/rails console
 ```shell
 bin/rails routes
 ```
+
+```shell
+bin/rails generate migration AddStatusToAccount status:string
+bin/rails generate migration AddStatusToTransaction status:string
+```
+
+# Next
+
+https://guides.rubyonrails.org/getting_started.html#using-concerns

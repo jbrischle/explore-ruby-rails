@@ -45,7 +45,7 @@ class AccountsController < ApplicationController
   private
 
   def article_params
-    params.require(:account).permit(:title, :bankName, :iban)
+    params.require(:account).permit(:title, :bankName, :iban, :status)
   end
 
 end

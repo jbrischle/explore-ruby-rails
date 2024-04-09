@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_13_223305) do
+ActiveRecord::Schema[7.1].define(version: 2024_04_09_134915) do
   create_table "accounts", force: :cascade do |t|
     t.string "title"
     t.string "bankName"
     t.string "iban"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status"
   end
 
   create_table "transactions", force: :cascade do |t|
@@ -25,6 +26,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_13_223305) do
     t.integer "account_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status"
     t.index ["account_id"], name: "index_transactions_on_account_id"
   end
 
