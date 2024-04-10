@@ -1,8 +1,10 @@
 <h1>Accounts</h1>
 
+You have <%= Account.open_count %> account registered! :)
+
 <ul>
   <% @accounts.each do |account| %>
-    <% unless account.closed? %>
+    <% unless account.archived? %>
       <li>
         <%= link_to account.title, account %>
       </li>

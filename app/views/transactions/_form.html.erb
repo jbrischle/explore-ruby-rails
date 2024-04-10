@@ -8,6 +8,11 @@
     <%= form.text_field :sourceIban %>
   </p>
 
+  <div>
+    <%= form.label :status %><br>
+    <%= form.select :status, Visible::VALID_STATUSES, selected: @transaction.status || 'open' %>
+  </div>
+
   <p>
     <%= form.submit %>
   </p>

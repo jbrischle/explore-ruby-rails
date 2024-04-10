@@ -1,4 +1,4 @@
-<% unless transaction.canceled? %>
+<% unless transaction.archived? %>
   <p>
     <strong>Amount:</strong>
     <%= transaction.amount %>
